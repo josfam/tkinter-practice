@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import tkinter as tk
+from tkinter import ttk  # themed widgets
 from utils.window_utils import center_window
 
 root = tk.Tk() # create app window
@@ -9,10 +10,8 @@ icon = tk.PhotoImage(file='./assets/icons/conway-lovelace.png')
 root.iconphoto(True, icon)
 root.resizable(False, False)
 
-# place a label on the root window
-message = tk.Label(root, text='Hello, World!')
-# make widget visible
-message.pack()
+# place a label on the root window and make it visible (pack)
+message = ttk.Label(root, text='Hello, World!').pack()
 
 center_window(root)
 
