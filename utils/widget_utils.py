@@ -9,3 +9,7 @@ def close_app(root: tk.Tk):
 def say_which_key(event):
     """Prints out what key was pressed"""
     print(f'{event.keysym} key pressed')
+
+def log_event(event):
+    """Prints out the entire event data as is"""
+    print(event)
