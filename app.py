@@ -14,5 +14,10 @@ message = ttk.Label(root, text='Hello, World!').pack()
 # binding a function
 close_btn = ttk.Button(root, text='Close', command=lambda: close_app(root)).pack()
 
+# binding an event
+save_btn = ttk.Button(root, text='Which key?')
+save_btn.bind('<Any-KeyPress>', say_which_key)
+save_btn.focus() # focus the button when the app starts
+save_btn.pack()
 
 root.mainloop() # keep the window visible on screen
