@@ -1,3 +1,5 @@
+"""Utility functions concerning the application window"""
+
 import tkinter as tk
 from pathlib import Path
 
