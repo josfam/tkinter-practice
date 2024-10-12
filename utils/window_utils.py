@@ -1,6 +1,8 @@
 import tkinter as tk
+from pathlib import Path
 
 def center_window(root: tk.Tk=None, window_width=800, window_height=800):
+    """Centers this tk window on the screen"""
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
 
@@ -9,3 +11,12 @@ def center_window(root: tk.Tk=None, window_width=800, window_height=800):
 
     # position the window to the center of the screen
     root.geometry(f'{window_width}x{window_height}+{x_center}+{y_center}')
+
+def setup_window(root: tk.Tk=None):
+    """Sets up the window at the start of the application"""
+    root.title('Tk experiments')
+    icon_path = Path('./assets/icons/conway-lovelace.png')
+    icon = tk.PhotoImage(file=str(icon_path))
+    root.iconphoto(True, icon)
+    root.resizable(False, False)
+    center_window(root)

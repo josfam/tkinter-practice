@@ -2,17 +2,12 @@
 
 import tkinter as tk
 from tkinter import ttk  # themed widgets
-from utils.window_utils import center_window
+from utils.window_utils import setup_window
 
 root = tk.Tk() # create app window
-root.title('Tk experiments')
-icon = tk.PhotoImage(file='./assets/icons/conway-lovelace.png')
-root.iconphoto(True, icon)
-root.resizable(False, False)
+setup_window(root)
 
 # place a label on the root window and make it visible (pack)
 message = ttk.Label(root, text='Hello, World!').pack()
-
-center_window(root)
 
 root.mainloop() # keep the window visible on screen
