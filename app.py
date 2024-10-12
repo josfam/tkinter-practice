@@ -5,6 +5,8 @@ from utils.window_utils import center_window
 
 root = tk.Tk() # create app window
 root.title('Tk experiments')
+icon = tk.PhotoImage(file='./assets/icons/conway-lovelace.png')
+root.iconphoto(True, icon)
 
 # place a label on the root window
 message = tk.Label(root, text='Hello, World!')
