@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+"""Experiments with layout - pack, fill, UP, DOWN, LEFT, RIGHT"""
+
 import tkinter as tk
 from tkinter import ttk  # themed widgets
 from utils.window_utils import setup_window
