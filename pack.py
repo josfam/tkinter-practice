@@ -15,10 +15,10 @@ label3 = ttk.Label(master=root, text='Three', background='blue', foreground='whi
 label4 = ttk.Label(master=root, text='Four', background='orange', foreground='black')
 label5 = ttk.Label(master=root, text='Five', background='yellow', foreground='black')
 
-label1.pack(side=tk.LEFT)
-label4.pack(side=tk.LEFT)
+label1.pack(side=tk.LEFT, fill='y')
+label4.pack(side=tk.LEFT, fill='y') # expand in the y direction
 label2.pack(side=tk.BOTTOM)
-label3.pack(side=tk.BOTTOM)
-label5.pack(side=tk.TOP)
+label3.pack(side=tk.BOTTOM, fill='x')
+label5.pack(side=tk.TOP, fill='both') # expand in x and y direction
 
 root.mainloop()
