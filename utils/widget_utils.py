@@ -10,6 +10,8 @@ def say_which_key(event):
     """Prints out what key was pressed"""
     print(f'{event.keysym} key pressed')
 
-def log_event(event):
+def log_event(event=None):
     """Prints out the entire event data as is"""
+    if event is None:
+        print('No event given')
     print(event)
