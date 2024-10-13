@@ -9,8 +9,16 @@ root = tk.Tk() # create app window
 setup_window(root)
 
 # stack from top to bottom with pack
-label1 = ttk.Label(master=root, text='Tkinter', background='red', foreground='white').pack()
-label2 = ttk.Label(master=root, text='Pack Layout', background='green', foreground='white').pack()
-label2 = ttk.Label(master=root, text='Demo', background='blue', foreground='white').pack()
+label1 = ttk.Label(master=root, text='One', background='red', foreground='white')
+label2 = ttk.Label(master=root, text='Two', background='green', foreground='white')
+label3 = ttk.Label(master=root, text='Three', background='blue', foreground='white')
+label4 = ttk.Label(master=root, text='Four', background='orange', foreground='black')
+label5 = ttk.Label(master=root, text='Five', background='yellow', foreground='black')
+
+label1.pack(side=tk.LEFT)
+label4.pack(side=tk.LEFT)
+label2.pack(side=tk.BOTTOM)
+label3.pack(side=tk.BOTTOM)
+label5.pack(side=tk.TOP)
 
 root.mainloop()
